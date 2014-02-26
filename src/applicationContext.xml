@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsl="http://www.w3.org/2001/XMLSchema-instance"
+	xsl:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean name="registroHorasInteractor" class="com.companyname.timesheet.interactor.RegistroHorasInteractor"/>
+
+<bean name="timesheetRepository" class="com.companyname.timesheet.repository.TimesheetRepositoryImplDB"/>
+
+<bean name="listadoHorasInteractor" class="com.companyname.timesheet.interactor.ListadoHorasInteractor" autowire="constructor" >
+	<!-- constructor-arg index="0" ref="timesheetRepository" / -->
+</bean>
+
+</beans>
